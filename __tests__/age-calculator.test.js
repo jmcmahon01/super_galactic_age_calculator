@@ -1,9 +1,15 @@
 import User from '../src/js/age-calculator.js';
 
 describe('User', () => {
-  test('should create a user object with name and age properties', () => {
-    const user1 = new User("Ralph", 61);
-    expect(user1.name).toBe("Ralph");
-    expect(user1.age).toEqual(61);
+  let user;
+  beforeEach(() =>{
+    user = new User("Ralph", 61);
   });
+  test('should create a user object with name and age properties', () => {
+    expect(user.name).toBe("Ralph");
+    expect(user.age).toEqual(61);
+  });
+  //test('should calculate age on Mercury from age on earth', () => {
+    //const 
+  //})
 });
