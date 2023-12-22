@@ -11,11 +11,14 @@ describe('User', () => {
   });
   test('should calculate age on Mercury from age on Earth', () => {
     expect(user.calculateMercuryAge()).toEqual(254);
-  })
+  });
   test('should calculate age on Venus from age on Earth', () => {
     expect(user.calculateVenusAge()).toEqual(98);
-  })
+  });
   test('should calculate age on Mars from age on Earth', () => {
     expect(user.calculateMarsAge()).toEqual(32);
+  });
+  test('should calculate age on Jupiter from age on Earth', () => {
+    expect(user.calculateJupiterAge()).toEqual(5);
   })
 });
