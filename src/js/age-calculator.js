@@ -11,4 +11,7 @@ export default class User {
     const venusMultiplier = 0.62;
     return Math.round(this.age / venusMultiplier);
   }
+  calculateMarsAge() {
+
+  }
 };
