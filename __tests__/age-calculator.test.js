@@ -2,7 +2,7 @@ import User from '../src/js/age-calculator.js';
 
 describe('User', () => {
   let user;
-  beforeEach(() =>{
+  beforeEach(() => {
     user = new User("Ralph", 61);
   });
   test('should create a user object with name and age properties', () => {

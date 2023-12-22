@@ -4,6 +4,7 @@ export default class User {
     this.age = age;
   }
   calculateMercuryAge() {
-
+    const mercuryMultiplier = 0.24;
+    return Math.round(this.age / mercuryMultiplier);
   }
 };
