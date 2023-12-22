@@ -16,6 +16,7 @@ export default class User {
     return Math.round(this.age / marsMultiplier);
   }
   calculateJupiterAge() {
-    
+    const jupiterMultiplier = 11.86;
+    return Math.round(this.age / jupiterMultiplier);
   }
 };
