@@ -4,6 +4,7 @@ describe('User', () => {
   let user;
   beforeEach(() => {
     user = new User("Ralph", 61);
+
   });
   test('should create a user object with name and age properties', () => {
     expect(user.name).toBe("Ralph");
@@ -11,6 +12,7 @@ describe('User', () => {
   });
   test('should calculate age on Mercury from age on Earth', () => {
     expect(user.calculateMercuryAge()).toEqual(254);
+
   });
   test('should calculate age on Venus from age on Earth', () => {
     expect(user.calculateVenusAge()).toEqual(98);
@@ -20,5 +22,8 @@ describe('User', () => {
   });
   test('should calculate age on Jupiter from age on Earth', () => {
     expect(user.calculateJupiterAge()).toEqual(5);
+  })
+  test('should calculate the amount of years that have passed on Mercury since previous birthday', () => {
+    expect(user.timePassedOnMercury()).toEqual(46);
   })
 });
