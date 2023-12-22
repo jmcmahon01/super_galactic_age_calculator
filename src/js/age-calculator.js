@@ -3,4 +3,7 @@ export default class User {
     this.name = name;
     this.age = age;
   }
+  calculateMercuryAge() {
+
+  }
 };

@@ -9,7 +9,7 @@ describe('User', () => {
     expect(user.name).toBe("Ralph");
     expect(user.age).toEqual(61);
   });
-  //test('should calculate age on Mercury from age on earth', () => {
-    //const 
-  //})
+  test('should calculate age on Mercury from age on earth', () => {
+    expect(user.calculateMercuryAge()).toEqual(254);
+  })
 });
