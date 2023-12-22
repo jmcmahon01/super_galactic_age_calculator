@@ -8,6 +8,7 @@ export default class User {
     return Math.round(this.age / mercuryMultiplier);
   }
   calculateVenusAge() {
-    
+    const venusMultiplier = 0.62;
+    return Math.round(this.age / venusMultiplier);
   }
 };
