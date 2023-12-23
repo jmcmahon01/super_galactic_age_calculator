@@ -60,6 +60,8 @@ export default class User {
     return Math.round((birthday - this.age) / marsMultiplier);
   }
   futureBdayJup() {
-    
+    const jupiterMultiplier = 11.86;
+    const birthday = 70;
+    return Math.round((birthday - this.age) / jupiterMultiplier);
   }
 }
