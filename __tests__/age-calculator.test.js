@@ -22,8 +22,11 @@ describe('User', () => {
   });
   test('should calculate age on Jupiter from age on Earth', () => {
     expect(user.calculateJupiterAge()).toEqual(5);
-  })
-  test('should calculate the amount of years that have passed on Mercury since previous birthday', () => {
+  });
+  test('should calculate the amount of years that have passed on Mercury since 50th birthday', () => {
     expect(user.timePassedOnMercury()).toEqual(46);
+  });
+  test('should calculate the amount of years that have passed on Venus since 50th birthday', () => {
+    expect(user.timePassedOnVenus()).toEqual(18);
   })
 });
