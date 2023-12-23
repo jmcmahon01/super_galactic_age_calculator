@@ -65,6 +65,7 @@ export default class User {
     return Math.round((birthday - this.age) / jupiterMultiplier);
   }
   futureBdayEarth() {
-    
+    const birthday = 70;
+    return Math.round(birthday - this.age);
   }
 }
