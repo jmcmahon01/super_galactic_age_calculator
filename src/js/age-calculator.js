@@ -44,4 +44,7 @@ export default class User {
     const previousBirthday = 50;
     return Math.round(this.age - previousBirthday);
   }
+  yearsUntilBirthday() {
+
+  }
 }
