@@ -47,5 +47,8 @@ describe('User', () => {
   test('should calculate the amount of years that will pass on Mars at 70th birthday', () => {
     expect(user.futureBdayMars()).toEqual(5);
   });
+  test('should calculate the amount of years that will pass on Jupiter at 70th birthday', () => {
+    expect(user.futureBdayJup()).toEqual(1);
+  });
 
 });
