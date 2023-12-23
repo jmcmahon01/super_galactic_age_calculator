@@ -49,4 +49,7 @@ export default class User {
     const birthday = 70;
     return Math.round((birthday - this.age) / mercuryMultiplier);
   }
+  futureBdayVen() {
+    
+}
 }

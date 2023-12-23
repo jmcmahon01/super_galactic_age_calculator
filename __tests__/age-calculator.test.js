@@ -41,5 +41,8 @@ describe('User', () => {
   test('should calculate the amount of years that will pass on Mercury at 70th birthday', () => {
     expect(user.futureBdayMerc()).toEqual(38);
   });
+  test('should calculate the amount of years that will pass on Venus at 70th birthday', () => {
+    expect(user.futureBdayVen()).toEqual(15);
+  });
 
 });
