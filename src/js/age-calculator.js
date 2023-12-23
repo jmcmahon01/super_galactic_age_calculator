@@ -44,7 +44,7 @@ export default class User {
     const previousBirthday = 50;
     return Math.round(this.age - previousBirthday);
   }
-  yearsUntilBirthday() {
+  futureBdayMerc() {
     const mercuryMultiplier = 0.24;
     const birthday = 70;
     return Math.round((birthday - this.age) / mercuryMultiplier);

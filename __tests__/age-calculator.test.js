@@ -39,6 +39,7 @@ describe('User', () => {
     expect(user.timePassedOnEarth()).toEqual(11);
   });
   test('should calculate the amount of years that will pass on Mercury at 70th birthday', () => {
-    expect(user.yearsUntilBirthday()).toEqual(38);
+    expect(user.futureBdayMerc()).toEqual(38);
   });
+
 });
