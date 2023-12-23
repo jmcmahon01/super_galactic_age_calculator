@@ -28,5 +28,8 @@ describe('User', () => {
   });
   test('should calculate the amount of years that have passed on Venus since 50th birthday', () => {
     expect(user.timePassedOnVenus()).toEqual(18);
+  });
+  test('should calculate the amount of years that have passed on Mars since 50th birthday', () => {
+    expect(user.timePassedOnMars()).toEqual(6);
   })
 });
