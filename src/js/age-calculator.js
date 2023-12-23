@@ -41,6 +41,7 @@ export default class User {
     return Math.round((this.age - previousBirthday) / jupiterMultiplier);
   }
   timePassedOnEarth() {
-
+    const previousBirthday = 50;
+    return Math.round(this.age - previousBirthday);
   }
 }
