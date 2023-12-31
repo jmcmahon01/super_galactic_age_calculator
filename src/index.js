@@ -35,14 +35,17 @@ window.addEventListener("load", function () {
   const venusButton = document.getElementById("venus");
   const venResponse = document.getElementById("venResponse");
   const displayVenusAge = document.getElementById("displayVenusAge");
+  const displayTimePassedVenus = document.getElementById("displayTimePassedVenus");
 
   const marsButton = document.getElementById("mars");
   const marsResponse = document.getElementById("marsResponse");
   const displayMarsAge = document.getElementById("displayMarsAge");
+  const displayTimePassedMars = document.getElementById("displayTimePassedMars");
 
   const jupButton = document.getElementById("jupiter");
   const jupResponse = document.getElementById("jupResponse");
   const displayJupAge = document.getElementById("displayJupAge");
+  const displayTimePassedJupiter = document.getElementById("displayTimePassedJupiter");
 
   mercuryButton.addEventListener("click", function () {
     if (!userInstance) {
@@ -63,6 +66,8 @@ window.addEventListener("load", function () {
     }
     const venusAge = userInstance.calculateVenusAge();
     displayVenusAge.innerText = ` ${venusAge} years`;
+    const timePassedVenus = userInstance.timePassedOnVenus();
+    displayTimePassedVenus.innerText = ` ${timePassedVenus}`;
     venResponse.classList.remove("hidden");
   });
 
@@ -73,6 +78,8 @@ window.addEventListener("load", function () {
     }
     const marsAge = userInstance.calculateMarsAge();
     displayMarsAge.innerText = ` ${marsAge} years`;
+    const timePassedMars = userInstance.timePassedOnMars();
+    displayTimePassedMars.innerText = ` ${timePassedMars}`;
     marsResponse.classList.remove("hidden");
   });
 
@@ -83,6 +90,8 @@ window.addEventListener("load", function () {
     }
     const jupAge = userInstance.calculateJupiterAge();
     displayJupAge.innerText = ` ${jupAge} years`;
+    const timePassedJupiter = userInstance.timePassedOnJupiter();
+    displayTimePassedJupiter.innerText = ` ${timePassedJupiter}`;
     jupResponse.classList.remove("hidden");
   });
 });

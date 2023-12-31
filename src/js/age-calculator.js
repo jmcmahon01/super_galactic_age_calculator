@@ -27,18 +27,18 @@ export default class User {
   }
   timePassedOnVenus() {
     const venusMultiplier = 0.62;
-    const previousBirthday = 50;
-    return Math.round((this.age - previousBirthday) / venusMultiplier);
+    const previousBirthday = 5;
+    return Math.round((previousBirthday) / venusMultiplier);
   }
   timePassedOnMars() {
     const marsMultiplier = 1.88;
-    const previousBirthday = 50;
-    return Math.round((this.age - previousBirthday) / marsMultiplier);
+    const previousBirthday = 5;
+    return Math.round((previousBirthday) / marsMultiplier);
   }
   timePassedOnJupiter() {
     const jupiterMultiplier = 11.86;
-    const previousBirthday = 50;
-    return Math.round((this.age - previousBirthday) / jupiterMultiplier);
+    const previousBirthday = 5;
+    return Math.round((previousBirthday) / jupiterMultiplier);
   }
   timePassedOnEarth() {
     const previousBirthday = 50;

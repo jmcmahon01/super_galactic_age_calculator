@@ -26,14 +26,14 @@ describe('User', () => {
   test('should calculate the amount of years that have passed on Mercury since birthday 5 years ago', () => {
     expect(user.timePassedOnMercury()).toEqual(21);
   });
-  test('should calculate the amount of years that have passed on Venus since 50th birthday', () => {
-    expect(user.timePassedOnVenus()).toEqual(18);
+  test('should calculate the amount of years that have passed on Venus since birthday 5 years ago', () => {
+    expect(user.timePassedOnVenus()).toEqual(8);
   });
-  test('should calculate the amount of years that have passed on Mars since 50th birthday', () => {
-    expect(user.timePassedOnMars()).toEqual(6);
+  test('should calculate the amount of years that have passed on Mars since birthday 5 years ago', () => {
+    expect(user.timePassedOnMars()).toEqual(3);
   });
-  test('should calculate the amount of years that have passed on Jupiter since 50th birthday', () => {
-    expect(user.timePassedOnJupiter()).toEqual(1);
+  test('should calculate the amount of years that have passed on Jupiter since birthday 5 years ago', () => {
+    expect(user.timePassedOnJupiter()).toEqual(0);
   });
   test('should calculate the amount of years that have passed on Earth since 50th birthday', () => {
     expect(user.timePassedOnEarth()).toEqual(11);
