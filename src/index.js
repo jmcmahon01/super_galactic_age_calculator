@@ -30,18 +30,28 @@ window.addEventListener("load", function () {
   const mercuryButton = document.getElementById("mercury");
   const mercResponse = document.getElementById("mercResponse");
   const displayMercuryAge = document.getElementById("displayAge");
+  const venusButton = document.getElementById("venus");
+  const venResponse = document.getElementById("venResponse");
+  const displayVenusAge = document.getElementById("displayVenusAge");
 
   mercuryButton.addEventListener("click", function () {
     if (!userInstance) {
       alert('Please submit the form first.');
       return;
     }
-
     const mercuryAge = userInstance.calculateMercuryAge();
-
     displayMercuryAge.innerText = `${mercuryAge} years`;
-
     mercResponse.classList.remove("hidden");
+  });
+
+  venusButton.addEventListener("click", function () {
+    if (!userInstance) {
+      alert('please submit the form first.');
+      return;
+    }
+    const venusAge = userInstance.calculateVenusAge();
+    displayVenusAge.innerText = ` ${venusAge} years`;
+    venResponse.classList.remove("hidden");
   });
 });
 
