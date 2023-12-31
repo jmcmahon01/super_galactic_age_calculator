@@ -36,6 +36,9 @@ window.addEventListener("load", function () {
   const marsButton = document.getElementById("mars");
   const marsResponse = document.getElementById("marsResponse");
   const displayMarsAge = document.getElementById("displayMarsAge");
+  const jupButton = document.getElementById("jupiter");
+  const jupResponse = document.getElementById("jupResponse");
+  const displayJupAge = document.getElementById("displayJupAge");
 
   mercuryButton.addEventListener("click", function () {
     if (!userInstance) {
@@ -65,6 +68,16 @@ window.addEventListener("load", function () {
     const marsAge = userInstance.calculateMarsAge();
     displayMarsAge.innerText = ` ${marsAge} years`;
     marsResponse.classList.remove("hidden");
+  });
+
+  jupButton.addEventListener("click", function () {
+    if (!userInstance) {
+      alert('please submit the form first.');
+      return;
+    }
+    const jupAge = userInstance.calculateJupiterAge();
+    displayJupAge.innerText = ` ${jupAge} years`;
+    jupResponse.classList.remove("hidden");
   });
 });
 
