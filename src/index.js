@@ -94,6 +94,17 @@ window.addEventListener("load", function () {
     displayTimePassedJupiter.innerText = ` ${timePassedJupiter}`;
     jupResponse.classList.remove("hidden");
   });
+  document.getElementById('resubmitButton').addEventListener('click', function () {
+    document.querySelector("form").reset();
+    const existingPTag = document.querySelector('#response');
+    if (existingPTag) {
+      existingPTag.remove();
+    }
+    document.getElementById('mercResponse').setAttribute("class", "hidden");
+    document.getElementById('venResponse').setAttribute("class", "hidden");
+    document.getElementById('marsResponse').setAttribute("class", "hidden");
+    document.getElementById('jupResponse').setAttribute("class", "hidden");
+  });
 });
 
 
