@@ -33,6 +33,9 @@ window.addEventListener("load", function () {
   const venusButton = document.getElementById("venus");
   const venResponse = document.getElementById("venResponse");
   const displayVenusAge = document.getElementById("displayVenusAge");
+  const marsButton = document.getElementById("mars");
+  const marsResponse = document.getElementById("marsResponse");
+  const displayMarsAge = document.getElementById("displayMarsAge");
 
   mercuryButton.addEventListener("click", function () {
     if (!userInstance) {
@@ -52,6 +55,16 @@ window.addEventListener("load", function () {
     const venusAge = userInstance.calculateVenusAge();
     displayVenusAge.innerText = ` ${venusAge} years`;
     venResponse.classList.remove("hidden");
+  });
+
+  marsButton.addEventListener("click", function () {
+    if (!userInstance) {
+      alert('please submit the form first.');
+      return;
+    }
+    const marsAge = userInstance.calculateMarsAge();
+    displayMarsAge.innerText = ` ${marsAge} years`;
+    marsResponse.classList.remove("hidden");
   });
 });
 
