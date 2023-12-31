@@ -22,7 +22,7 @@ body {
 .custom-btn {
   width: 130px;
   height: 40px;
-  color: #e498cc;
+  color: #f9f908;
   border-radius: 5px;
   padding: 10px 25px;
   font-family: 'Lato', sans-serif;
@@ -53,8 +53,8 @@ body {
 }
 
 .btn-1 span {
-  background: rgb(93, 5, 5);
-  background: linear-gradient(0deg, rgb(86, 2, 2) 0%, rgb(172, 43, 43) 100%);
+  background: rgb(32, 2, 109);
+  background: linear-gradient(0deg, rgb(26, 4, 115) 0%, rgb(65, 31, 239) 100%);
   display: block;
   position: absolute;
   width: 130px;
