@@ -22,8 +22,8 @@ export default class User {
   }
   timePassedOnMercury() {
     const mercuryMultiplier = 0.24;
-    const previousBirthday = 50;
-    return Math.round((this.age - previousBirthday) / mercuryMultiplier);
+    const previousBirthday = 5; //Birthday 5 years ago
+    return Math.round((previousBirthday) / mercuryMultiplier);
   }
   timePassedOnVenus() {
     const venusMultiplier = 0.62;

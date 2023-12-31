@@ -30,12 +30,16 @@ window.addEventListener("load", function () {
   const mercuryButton = document.getElementById("mercury");
   const mercResponse = document.getElementById("mercResponse");
   const displayMercuryAge = document.getElementById("displayAge");
+  const displayTimePassed = document.getElementById("displayTimePassed");
+
   const venusButton = document.getElementById("venus");
   const venResponse = document.getElementById("venResponse");
   const displayVenusAge = document.getElementById("displayVenusAge");
+
   const marsButton = document.getElementById("mars");
   const marsResponse = document.getElementById("marsResponse");
   const displayMarsAge = document.getElementById("displayMarsAge");
+
   const jupButton = document.getElementById("jupiter");
   const jupResponse = document.getElementById("jupResponse");
   const displayJupAge = document.getElementById("displayJupAge");
@@ -47,6 +51,8 @@ window.addEventListener("load", function () {
     }
     const mercuryAge = userInstance.calculateMercuryAge();
     displayMercuryAge.innerText = `${mercuryAge} years`;
+    const timePassed = userInstance.timePassedOnMercury();
+    displayTimePassed.innerText = ` ${timePassed}`;
     mercResponse.classList.remove("hidden");
   });
 
