@@ -57,6 +57,7 @@ window.addEventListener("load", function () {
     const timePassed = userInstance.timePassedOnMercury();
     displayTimePassed.innerText = ` ${timePassed}`;
     mercResponse.classList.remove("hidden");
+    mercResponse.scrollIntoView({ behavior: 'smooth' });
   });
 
   venusButton.addEventListener("click", function () {
@@ -69,6 +70,7 @@ window.addEventListener("load", function () {
     const timePassedVenus = userInstance.timePassedOnVenus();
     displayTimePassedVenus.innerText = ` ${timePassedVenus}`;
     venResponse.classList.remove("hidden");
+    venResponse.scrollIntoView({ behavior: 'smooth' });
   });
 
   marsButton.addEventListener("click", function () {
@@ -81,6 +83,7 @@ window.addEventListener("load", function () {
     const timePassedMars = userInstance.timePassedOnMars();
     displayTimePassedMars.innerText = ` ${timePassedMars}`;
     marsResponse.classList.remove("hidden");
+    marsResponse.scrollIntoView({ behavior: 'smooth' });
   });
 
   jupButton.addEventListener("click", function () {
@@ -93,6 +96,7 @@ window.addEventListener("load", function () {
     const timePassedJupiter = userInstance.timePassedOnJupiter();
     displayTimePassedJupiter.innerText = ` ${timePassedJupiter}`;
     jupResponse.classList.remove("hidden");
+    jupResponse.scrollIntoView({ behavior: 'smooth' });
   });
   document.getElementById('resubmitButton').addEventListener('click', function () {
     document.querySelector("form").reset();
@@ -104,6 +108,7 @@ window.addEventListener("load", function () {
     document.getElementById('venResponse').setAttribute("class", "hidden");
     document.getElementById('marsResponse').setAttribute("class", "hidden");
     document.getElementById('jupResponse').setAttribute("class", "hidden");
+    document.body.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
