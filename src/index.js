@@ -113,7 +113,7 @@ window.addEventListener("load", function () {
   document.getElementById('resubmitButton').addEventListener('click', function () {
     document.querySelector("form").reset();
     const responseContainer = document.querySelector('#response');
-    responseContainer.innerHTML = ''; // Clear the content
+    responseContainer.innerHTML = '';
 
     document.getElementById('mercResponse').setAttribute("class", "hidden");
     document.getElementById('venResponse').setAttribute("class", "hidden");
