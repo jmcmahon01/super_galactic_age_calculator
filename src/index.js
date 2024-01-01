@@ -31,21 +31,25 @@ window.addEventListener("load", function () {
   const mercResponse = document.getElementById("mercResponse");
   const displayMercuryAge = document.getElementById("displayAge");
   const displayTimePassed = document.getElementById("displayTimePassed");
+  const displayFutureMerc = document.getElementById("displayFutureMerc");
 
   const venusButton = document.getElementById("venus");
   const venResponse = document.getElementById("venResponse");
   const displayVenusAge = document.getElementById("displayVenusAge");
   const displayTimePassedVenus = document.getElementById("displayTimePassedVenus");
+  const displayFutureVen = document.getElementById("displayFutureVen");
 
   const marsButton = document.getElementById("mars");
   const marsResponse = document.getElementById("marsResponse");
   const displayMarsAge = document.getElementById("displayMarsAge");
   const displayTimePassedMars = document.getElementById("displayTimePassedMars");
+  const displayFutureMars = document.getElementById("displayFutureMars");
 
   const jupButton = document.getElementById("jupiter");
   const jupResponse = document.getElementById("jupResponse");
   const displayJupAge = document.getElementById("displayJupAge");
   const displayTimePassedJupiter = document.getElementById("displayTimePassedJupiter");
+  const displayFutureJup = document.getElementById("displayFutureJup");
 
   mercuryButton.addEventListener("click", function () {
     if (!userInstance) {
@@ -56,6 +60,8 @@ window.addEventListener("load", function () {
     displayMercuryAge.innerText = `${mercuryAge} years`;
     const timePassed = userInstance.timePassedOnMercury();
     displayTimePassed.innerText = ` ${timePassed}`;
+    const futureMerc = userInstance.futureBdayMerc();
+    displayFutureMerc.innerText = ` ${futureMerc}`;
     mercResponse.classList.remove("hidden");
     mercResponse.scrollIntoView({ behavior: 'smooth' });
   });
@@ -69,6 +75,8 @@ window.addEventListener("load", function () {
     displayVenusAge.innerText = ` ${venusAge} years`;
     const timePassedVenus = userInstance.timePassedOnVenus();
     displayTimePassedVenus.innerText = ` ${timePassedVenus}`;
+    const futureVen = userInstance.futureBdayVen();
+    displayFutureVen.innerText = ` ${futureVen}`;
     venResponse.classList.remove("hidden");
     venResponse.scrollIntoView({ behavior: 'smooth' });
   });
@@ -82,6 +90,8 @@ window.addEventListener("load", function () {
     displayMarsAge.innerText = ` ${marsAge} years`;
     const timePassedMars = userInstance.timePassedOnMars();
     displayTimePassedMars.innerText = ` ${timePassedMars}`;
+    const futureMars = userInstance.futureBdayMars();
+    displayFutureMars.innerText = ` ${futureMars}`;
     marsResponse.classList.remove("hidden");
     marsResponse.scrollIntoView({ behavior: 'smooth' });
   });
@@ -95,15 +105,16 @@ window.addEventListener("load", function () {
     displayJupAge.innerText = ` ${jupAge} years`;
     const timePassedJupiter = userInstance.timePassedOnJupiter();
     displayTimePassedJupiter.innerText = ` ${timePassedJupiter}`;
+    const futureJup = userInstance.futureBdayJup();
+    displayFutureJup.innerText = ` ${futureJup}`;
     jupResponse.classList.remove("hidden");
     jupResponse.scrollIntoView({ behavior: 'smooth' });
   });
   document.getElementById('resubmitButton').addEventListener('click', function () {
     document.querySelector("form").reset();
-    const existingPTag = document.querySelector('#response');
-    if (existingPTag) {
-      existingPTag.remove();
-    }
+    const responseContainer = document.querySelector('#response');
+    responseContainer.innerHTML = ''; // Clear the content
+
     document.getElementById('mercResponse').setAttribute("class", "hidden");
     document.getElementById('venResponse').setAttribute("class", "hidden");
     document.getElementById('marsResponse').setAttribute("class", "hidden");
