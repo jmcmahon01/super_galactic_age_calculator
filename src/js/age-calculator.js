@@ -22,7 +22,7 @@ export default class User {
   }
   timePassedOnMercury() {
     const mercuryMultiplier = 0.24;
-    const previousBirthday = 5; //Birthday 5 years ago
+    const previousBirthday = 5;
     return Math.round((previousBirthday) / mercuryMultiplier);
   }
   timePassedOnVenus() {
